@@ -28,7 +28,7 @@ elif operation == 3:
     result = num1 * num2
     print(f"The result of multiplication is: {result}")
 elif operation == 4:
-    if num2 ! = 0:
+    if num2 != 0:
         result = num1 / num2
         print(f"The result of division is: {result}")
     else:
