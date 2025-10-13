@@ -13,7 +13,7 @@
 # - Consider converting to lowercase for consistent counting
 import string
 
-filename = input("Enter the filename: ")
+filename = input('Enter the filename: ')
 
 letter_counts = {}
 
@@ -22,14 +22,14 @@ try:
         content = file.read()
 
         for char in content.lower():
-            if char in string.ascii_lowercase:  # Check if it's a letter
+            if char in string.ascii_lowercase:  
                 if char in letter_counts:
                     letter_counts[char] += 1
                 else:
                     letter_counts[char] = 1
 
     for letter in sorted(letter_counts):
-        print(f"{letter}: {letter_counts[letter]}")
+        print(f'{letter}: {letter_counts[letter]}')
 
 except FileNotFoundError:
-    print("File not found. Please check the filename and try again.")
+    print('File not found. Please check the filename and try again.')
