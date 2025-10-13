@@ -37,8 +37,8 @@ def write_report(students, output_file):
             for student in students:
                 file.write(f"{student['name']}: {student['average']:.2f}\n")
         print(f" '{output_file}'")
-    except ReportError:
-        print(f"Error")
+    except Exception as e:
+        print(f"Error:{e}")
 
 if __name__ == "__main__":
     input_file = "student_data.csv"
