@@ -30,9 +30,8 @@ try:
 
             date, time, ip, user_agent, request, status = parts
 
-     
             if request == 'POST /login' and status == '401':
                 print(f'IP address {ip} failed to login at {time} on {date}')
 
 except FileNotFoundError:
-    print('File Not Founded')
+    print('File Not Found')
