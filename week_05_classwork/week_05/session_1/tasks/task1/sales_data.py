@@ -42,6 +42,28 @@ def read_sales_filedata(fliename):
         print('Sale Data Not Found')
 #   - the widget which has been sold the most
       def find_most_sold_widget(data):
+          product_sales = {}
+          for row in data:
+              product = row[1]
+              try:
+                  units = int(row[3])
+                  product_sales[product] = product_sales.get(product, 0) + units
+              except ValueError:
+                  continue
+          if product_sales:
+              most_sold_product = max(product_sales, key = product_sales.get)
+              print(f"'Most sold product is '{most_sold_product}'")
+          else:
+            print('Product Data Not Found')
+if __name__ == "__main__":
+    filename = "sales.csv"
+    sales_data = read_sales_filedata(filename)
+    if sales_data:
+        find_largest_saleday(sales_data)
+        find_average_sale_amount(sales_data)
+        find_most_sold_widget(sales_data)
+            
+   
         
 # and print these out in a nice, human-readable format
 
