@@ -32,4 +32,4 @@ try:
         print(f'{letter}: {letter_counts[letter]}')
 
 except FileNotFoundError:
-    print('File not found. Please check the filename and try again.')
+    print('File not found.')
