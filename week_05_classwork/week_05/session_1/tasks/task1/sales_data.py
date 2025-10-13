@@ -37,9 +37,12 @@ def read_sales_filedata(fliename):
           continue
       if count > 0:
         average = total / count
-        
-          
+        print(f'average sale amount is {average:}')
+      else:
+        print('Sale Data Not Found')
 #   - the widget which has been sold the most
+      def find_most_sold_widget(data):
+        
 # and print these out in a nice, human-readable format
 
 # for a challenge - add a menu so the user picks which piece of data to show
