@@ -12,8 +12,17 @@ def load_existing_list(filename = 'shopping_list.txt'):
           if item:
               shopping_list.append(item)
       print('Laod existing shopping list.')
+    except Exception as e:
+        print(f'Error:{e}')
 # Step 2: Define a function to add an item to the list.
 # Prompt the user for the item name and add it to the list.
+def add_item():
+  item = input('Enter item to add:\n').strip()
+  if item:
+    shopping_list.append(item)
+    print(f"Added '{item}' to the list")
+  else:
+    print('Failed')
 # Step 3: Define a function to remove an item from the list.
 # Prompt the user for the item name to remove and delete it from the list if it exists.
 # hint: use list.remove() or check if item is in list first
